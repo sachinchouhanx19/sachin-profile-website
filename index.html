@@ -10,15 +10,29 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Segoe UI', sans-serif;
 }
+
+html{scroll-behavior:smooth;}
 
 body{
     background:#020617;
     color:#e5e7eb;
+    overflow-x:hidden;
 }
 
-/* Hero Section */
+/* ===== SCROLL PROGRESS ===== */
+#progress{
+    position:fixed;
+    top:0;
+    left:0;
+    height:4px;
+    background:#38bdf8;
+    width:0%;
+    z-index:9999;
+}
+
+/* ===== HERO ===== */
 .hero{
     min-height:100vh;
     display:flex;
@@ -26,181 +40,241 @@ body{
     align-items:center;
     justify-content:center;
     text-align:center;
-    background:radial-gradient(circle at top, #0f172a, #020617);
-    animation:fadeIn 2s ease;
+    background:linear-gradient(135deg,#020617,#0f172a);
+    padding:40px 20px;
 }
 
 .hero img{
-    width:100%;
-    max-width:1100px;
-    height:420px;
-    object-fit:cover;
-    border-radius:18px;
+    width:95%;
+    max-width:1200px;
+    height:auto;
+    object-fit:contain;
+    border-radius:20px;
     border:3px solid #38bdf8;
-    box-shadow:0 25px 70px rgba(56,189,248,0.6);
-    animation:fadeUp 1.4s ease;
+    box-shadow:0 0 90px rgba(56,189,248,0.6);
+    animation:zoomIn 2s ease;
 }
 
 .hero h1{
-    margin-top:25px;
-    font-size:44px;
+    margin-top:30px;
+    font-size:50px;
     color:#38bdf8;
 }
 
-.hero h3{
-    margin-top:10px;
-    font-size:20px;
+#typing{
+    margin-top:12px;
+    font-size:22px;
     color:#94a3b8;
+    min-height:28px;
 }
 
 .hero p{
-    max-width:800px;
-    margin-top:20px;
+    max-width:900px;
+    margin-top:18px;
     font-size:18px;
-    line-height:1.7;
+    line-height:1.8;
     color:#cbd5f5;
 }
 
-/* Buttons */
+/* ===== BUTTONS ===== */
 .buttons{
-    margin-top:30px;
+    margin-top:35px;
 }
 
 .buttons a{
     display:inline-block;
     margin:10px;
-    padding:14px 34px;
+    padding:15px 34px;
     background:#38bdf8;
     color:#020617;
     text-decoration:none;
     font-weight:bold;
-    border-radius:30px;
-    transition:0.3s;
+    font-size:17px;
+    border-radius:50px;
+    transition:0.4s ease;
 }
 
 .buttons a:hover{
     background:#0ea5e9;
-    transform:scale(1.08);
+    transform:translateY(-6px) scale(1.08);
 }
 
-/* Section */
+/* ===== SECTIONS ===== */
 .section{
     width:90%;
-    max-width:1000px;
-    margin:90px auto;
-    text-align:center;
-    animation:fadeUp 1.5s ease;
+    max-width:1200px;
+    margin:100px auto;
+    opacity:0;
+    transform:translateY(60px);
+    transition:1s ease;
+}
+
+.section.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 .section h2{
-    font-size:36px;
+    text-align:center;
+    font-size:38px;
     color:#38bdf8;
-    margin-bottom:25px;
+    margin-bottom:30px;
 }
 
 .section p{
     font-size:18px;
-    color:#94a3b8;
-    line-height:1.8;
+    color:#cbd5f5;
+    line-height:2;
+    margin-bottom:20px;
     text-align:justify;
 }
 
-/* Footer */
+/* ===== FULL SIZE GALLERY ===== */
+.gallery-preview{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.gallery-preview a{
+    text-decoration:none;
+}
+
+.gallery-preview img{
+    width:100%;
+    height:auto;
+    object-fit:contain;   /* IMPORTANT */
+    border-radius:18px;
+    border:3px solid #38bdf8;
+    transition:0.4s ease;
+    background:#000;
+    padding:8px;
+}
+
+.gallery-preview img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 45px rgba(56,189,248,0.7);
+}
+
+/* ===== FOOTER ===== */
 footer{
     text-align:center;
-    padding:25px;
+    padding:30px;
     background:#000;
     color:#38bdf8;
 }
 
-/* Animations */
-@keyframes fadeIn{
-    from{opacity:0}
-    to{opacity:1}
-}
-
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(40px)}
-    to{opacity:1; transform:translateY(0)}
-}
-
-@keyframes float{
-    0%,100%{transform:translateY(0)}
-    50%{transform:translateY(-15px)}
+/* ===== ANIMATION ===== */
+@keyframes zoomIn{
+    from{opacity:0; transform:scale(0.85)}
+    to{opacity:1; transform:scale(1)}
 }
 </style>
 </head>
 
 <body>
 
+<div id="progress"></div>
+
 <!-- HERO -->
 <section class="hero" id="home">
-    <img src="./profile.jpg" alt="Sachin Chouhan">
+    <img src="profile.jpg" alt="Sachin Chouhan">
 
     <h1>Sachin Chouhan</h1>
-    <h3>Future IITian | Student | Programmer</h3>
+    <div id="typing"></div>
 
     <p>
-        Dedicated learner with strong discipline, consistency and a passion
-        for technology, science and self-improvement.
+        A disciplined learner focused on consistency, technology and growth.
+        Building skills today for a stronger tomorrow.
     </p>
 
-    <p style="margin-top:15px;color:#38bdf8;">
+    <p style="color:#38bdf8;margin-top:10px;">
         GitHub Username: <b>sachinchouhanx19</b>
     </p>
 
     <div class="buttons">
-        <a href="#home">Home</a>
-        <a href="photos.html">My Gallery</a>
+        <a href="#story">My Story</a>
+        <a href="#gallery">Gallery</a>
+        <a href="Sachin_Chouhan_Resume.pdf" target="_blank">Resume</a>
         <a href="https://www.python.org" target="_blank">Learn Python</a>
         <a href="https://github.com/sachinchouhanx19" target="_blank">GitHub</a>
     </div>
 </section>
 
-<!-- FULL STORY -->
+<!-- STORY -->
 <section class="section" id="story">
     <h2>My Full Story</h2>
     <p>
-        My name is Sachin Chouhan, and my journey is built on discipline,
-        determination, and continuous learning. I come from a background
-        where success is earned through hard work, consistency, and patience.
-        From an early stage, I realized that education is not just about marks,
-        but about developing skills, mindset, and problem-solving ability.
-        <br><br>
-        I am deeply interested in science, mathematics, and programming,
-        especially Python, which helps me think logically and creatively.
-        Every day, I focus on improving myself by studying sincerely,
-        practicing problems, and learning new technologies. I believe that
-        small daily efforts lead to big achievements over time.
-        <br><br>
-        My goal is to become an IITian and a successful engineer who can
-        contribute positively to society through knowledge and innovation.
-        I strongly believe in self-discipline, time management, and staying
-        motivated even during difficult phases. Failures are not obstacles
-        for me; they are lessons that push me to work harder.
-        <br><br>
-        This website represents my journey, my efforts, and my dreams.
-        Through this platform, I want to showcase my learning path,
-        achievements, and memorable moments that shape who I am becoming.
+        My name is Sachin Chouhan. My journey is based on discipline, patience
+        and continuous learning. I believe success is built through consistency,
+        not shortcuts.
+    </p>
+    <p>
+        I am a Class 12 MP Board student with strong interest in science and
+        technology. Along with academics, I learn programming and web
+        development to sharpen my thinking and creativity.
+    </p>
+    <p>
+        My goal is to become an IITian and a skilled engineer who can contribute
+        positively to society and inspire others to believe in themselves.
     </p>
 </section>
 
-<!-- GALLERY SECTION -->
-<section class="section">
-    <h2>My Gallery</h2>
-    <p>
-        A collection of moments that reflect my journey, discipline,
-        learning, and growth.
-    </p>
-    <div class="buttons">
-        <a href="photos.html">Open Gallery</a>
-        <a href="#home">Back to Home</a>
+<!-- GALLERY -->
+<section class="section" id="gallery">
+    <h2>Gallery (Full Size)</h2>
+
+    <div class="gallery-preview">
+        <a href="photo1.jpg" target="_blank"><img src="photo1.jpg"></a>
+        <a href="photo2.jpg" target="_blank"><img src="photo2.jpg"></a>
+        <a href="photo3.jpg" target="_blank"><img src="photo3.jpg"></a>
+        <a href="photo4.jpg" target="_blank"><img src="photo4.jpg"></a>
+        <a href="photo5.jpg" target="_blank"><img src="photo5.jpg"></a>
+    </div>
+
+    <div class="buttons" style="text-align:center;">
+        <a href="#home">Back to Top</a>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Sachin Chouhan | Proud Future IITian</p>
+    © 2026 Sachin Chouhan | Proud Future IITian
 </footer>
+
+<script>
+/* SCROLL PROGRESS */
+window.addEventListener("scroll",()=>{
+    let scrollTop=document.documentElement.scrollTop;
+    let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+    document.getElementById("progress").style.width=(scrollTop/height)*100+"%";
+});
+
+/* REVEAL */
+const sections=document.querySelectorAll(".section");
+window.addEventListener("scroll",()=>{
+    sections.forEach(sec=>{
+        if(sec.getBoundingClientRect().top < window.innerHeight-120){
+            sec.classList.add("show");
+        }
+    });
+});
+
+/* TYPING */
+const text=["Aspiring IITian","Python Learner","Web Developer","Future Engineer"];
+let i=0,j=0,del=false;
+const typing=document.getElementById("typing");
+function type(){
+    if(!del && j<=text[i].length){
+        typing.textContent=text[i].substring(0,j++);
+    }else if(del && j>=0){
+        typing.textContent=text[i].substring(0,j--);
+    }
+    if(j===text[i].length+1) del=true;
+    if(j===0 && del){del=false;i=(i+1)%text.length;}
+    setTimeout(type,120);
+}
+type();
+</script>
 
 </body>
 </html>
