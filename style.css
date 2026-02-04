@@ -1,238 +1,216 @@
-/* ---------------------- General Reset ---------------------- */
+/* ==============================
+   Reset & Base Styles
+============================== */
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 body{
-  background:#020617;
-  color:#e5e7eb;
-  scroll-behavior:smooth;
+    background:#020617;
+    color:#e5e7eb;
+    line-height:1.6;
 }
 
-/* Links */
-a{text-decoration:none;color:inherit;}
-
-/* ---------------------- Hero Section ---------------------- */
+/* ==============================
+   Hero Section
+============================== */
 .hero{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:50px 20px;
-  gap:50px;
-  background:linear-gradient(135deg,#0f172a,#020617);
-  flex-wrap:wrap;
-  animation:fadeIn 1.5s ease;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:radial-gradient(circle at top, #0f172a, #020617);
+    animation:fadeIn 2s ease;
 }
+
 .hero img{
-  width:200px;
-  height:200px;
-  border-radius:50%;
-  border:4px solid #38bdf8;
-  object-fit:cover;
-  box-shadow:0 0 50px rgba(56,189,248,0.5);
-  animation:float 3s ease-in-out infinite;
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px; /* Rectangle now */
+    border:4px solid #38bdf8;
+    box-shadow: 0 20px 60px rgba(56,189,248,0.6);
+    animation:float 3s ease-in-out infinite;
 }
-.hero .info{
-  max-width:500px;
-}
-.hero .info h1{font-size:36px;color:#38bdf8;margin-bottom:10px;}
-.hero .info p{font-size:18px;margin:5px 0;color:#cbd5f5;}
-.hero .buttons a{
-  display:inline-block;
-  margin:10px 10px 0 0;
-  padding:10px 25px;
-  background:#38bdf8;
-  color:#000;
-  font-weight:bold;
-  border-radius:8px;
-  transition:0.3s;
-}
-.hero .buttons a:hover{background:#0ea5e9;transform:scale(1.05);}
 
-/* ---------------------- Section Titles ---------------------- */
+.hero h1{
+    margin-top:20px;
+    font-size:40px;
+    color:#38bdf8;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:18px;
+    color:#94a3b8;
+}
+
+.buttons a{
+    text-decoration:none;
+    color:#020617;
+    background:#38bdf8;
+    padding:10px 20px;
+    margin:5px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.buttons a:hover{
+    transform:scale(1.05);
+}
+
+/* ==============================
+   Sections
+============================== */
 .section{
-  padding:50px 20px;
-  max-width:1200px;
-  margin:auto;
-  opacity:0;
-  transform:translateY(50px);
-  transition:1s;
+    padding:60px 20px;
+    max-width:1200px;
+    margin:0 auto;
 }
-.section.show{
-  opacity:1;
-  transform:translateY(0);
-}
+
 .section h2{
-  color:#38bdf8;
-  font-size:32px;
-  margin-bottom:25px;
-  text-align:center;
+    color:#38bdf8;
+    font-size:32px;
+    margin-bottom:20px;
+    text-align:center;
 }
 
-/* ---------------------- Story Section ---------------------- */
-#story p{
-  font-size:18px;
-  line-height:1.8;
-  text-align:justify;
+/* ==============================
+   Gallery
+============================== */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-/* ---------------------- Skills Section ---------------------- */
-.skill{
-  max-width:600px;
-  margin:15px auto;
-  text-align:left;
-}
-.skill p{margin-bottom:5px;}
-.skill-bar{
-  width:100%;
-  background:#111827;
-  border-radius:10px;
-  overflow:hidden;
-  margin-bottom:15px;
-}
-.skill-bar div{
-  height:15px;
-  background:#38bdf8;
-  width:0;
-  animation:fillSkill 2s forwards;
+.gallery a{
+    display:block;
+    position:relative;
+    overflow:hidden;
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* ---------------------- Gallery Section ---------------------- */
-.gallery-container{
-  display:flex;
-  flex-wrap:wrap;
-  gap:20px;
-  justify-content:center;
-  margin-top:20px;
-}
-.gallery-container a{
-  display:inline-block;
-  width:300px;
-  height:200px;
-  background:#111827;
-  color:#38bdf8;
-  border-radius:10px;
-  border:2px solid #38bdf8;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:bold;
-  font-size:18px;
-  text-align:center;
-  transition:0.3s;
-}
-.gallery-container a:hover{
-  background:#38bdf8;
-  color:#000;
-  transform:scale(1.05);
-  box-shadow:0 0 45px rgba(56,189,248,0.7);
+.gallery a img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    transition:0.3s;
 }
 
-/* ---------------------- Contact & Feedback Forms ---------------------- */
-.contact form,
-.contact-form{
-  display:flex;
-  flex-direction:column;
-  max-width:600px;
-  margin:auto;
-  gap:15px;
-}
-.contact input,
-.contact textarea,
-.contact-form input,
-.contact-form textarea{
-  padding:12px;
-  border-radius:8px;
-  border:none;
-  font-size:16px;
-}
-.contact button,
-.contact-form button{
-  padding:15px;
-  font-size:18px;
-  background:#38bdf8;
-  color:#000;
-  border:none;
-  border-radius:10px;
-  cursor:pointer;
-  transition:0.3s;
-}
-.contact button:hover,
-.contact-form button:hover{
-  background:#0ea5e9;
-  transform:scale(1.05);
+.gallery a:hover img{
+    transform:scale(1.05);
 }
 
-/* ---------------------- Resume Section ---------------------- */
-.resume-buttons{
-  text-align:center;
-  margin-top:20px;
-}
-.resume-buttons a{
-  display:inline-block;
-  margin:5px;
-  padding:12px 25px;
-  background:#38bdf8;
-  color:#000;
-  font-weight:bold;
-  border-radius:8px;
-  transition:0.3s;
-}
-.resume-buttons a:hover{
-  background:#0ea5e9;
-  transform:scale(1.05);
+.gallery a::after{
+    content:"View Photo";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;
+    font-weight:bold;
+    font-size:18px;
+    opacity:0;
+    transition:0.3s;
 }
 
-/* ---------------------- Social Links Section ---------------------- */
-#social{
-  text-align:center;
-  padding:40px 20px;
-}
-#social h2{
-  color:#38bdf8;
-  font-size:32px;
-  margin-bottom:25px;
-}
-.social-buttons{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-.social-buttons a{
-  padding:12px 25px;
-  background:#38bdf8;
-  color:#000;
-  font-weight:bold;
-  border-radius:8px;
-  transition:0.3s;
-}
-.social-buttons a:hover{
-  background:#0ea5e9;
-  transform:scale(1.05);
+.gallery a:hover::after{
+    opacity:1;
 }
 
-/* ---------------------- Footer ---------------------- */
+/* ==============================
+   Resume Section
+============================== */
+.resume a{
+    display:inline-block;
+    text-decoration:none;
+    color:#020617;
+    background:#38bdf8;
+    padding:10px 20px;
+    margin:5px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.resume a:hover{
+    transform:scale(1.05);
+}
+
+/* ==============================
+   Contact & Feedback
+============================== */
+form{
+    display:flex;
+    flex-direction:column;
+    max-width:600px;
+    margin:0 auto;
+}
+
+form input, form textarea{
+    margin:10px 0;
+    padding:12px;
+    border-radius:5px;
+    border:none;
+    font-size:16px;
+}
+
+form input:focus, form textarea:focus{
+    outline:none;
+    box-shadow:0 0 10px #38bdf8;
+}
+
+form button{
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    font-size:18px;
+    color:#020617;
+    background:#38bdf8;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+form button:hover{
+    transform:scale(1.05);
+}
+
+/* ==============================
+   Footer / Socials
+============================== */
 footer{
-  text-align:center;
-  padding:30px;
-  background:#000;
-  color:#38bdf8;
+    text-align:center;
+    padding:30px;
+    background:#000;
+    color:#38bdf8;
 }
 
-/* ---------------------- Animations ---------------------- */
+footer a{
+    margin:0 10px;
+    color:#38bdf8;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+footer a:hover{
+    color:#0ea5e9;
+}
+
+/* ==============================
+   Animations
+============================== */
 @keyframes float{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-20px);}
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
 }
-@keyframes fillSkill{
-  0%{width:0;}
-  100%{width:var(--width);}
-}
+
 @keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
+    0%{opacity:0;}
+    100%{opacity:1;}
 }
