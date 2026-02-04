@@ -96,30 +96,30 @@
 <!-- JS Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.js"></script>
 <script>
-// Year Update
+// Update year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Section reveal on scroll
-const sections=document.querySelectorAll(".section");
-window.addEventListener("scroll",()=>{
-  sections.forEach(sec=>{
-    if(sec.getBoundingClientRect().top < window.innerHeight-120){
+// Reveal sections on scroll
+const sections = document.querySelectorAll(".section");
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    if(sec.getBoundingClientRect().top < window.innerHeight - 120){
       sec.classList.add("show");
     }
   });
 });
 
 // Typing animation for story
-const storyText=`Hello! I am Sachin Chouhan, a passionate learner and future IITian. 
+const storyText = `Hello! I am Sachin Chouhan, a passionate learner and future IITian. 
 I am currently in Class 12th (PCM) at Madhav Nagar School, Ujjain. 
 I have been deeply interested in Physics, Chemistry, Mathematics and coding from a young age. 
 Through consistent practice, projects, and experiments, I aim to excel in IIT exams. 
 This website showcases my skills, projects, gallery, resume, and ways to contact me. 
 I hope to inspire others and build a bright future with knowledge and creativity.`;
 
-let i=0;
+let i = 0;
 function typeStory(){
-  if(i<storyText.length){
+  if(i < storyText.length){
     document.getElementById("story-text").innerHTML += storyText.charAt(i);
     i++;
     setTimeout(typeStory,25);
