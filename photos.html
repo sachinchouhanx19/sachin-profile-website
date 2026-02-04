@@ -1,30 +1,95 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sachin Chouhan | Photo Gallery</title>
-  <style>
-    body{margin:0;font-family:Arial,sans-serif;background:#020617;color:#e5e7eb;}
-    header{text-align:center;padding:50px 20px;background:radial-gradient(circle at top,#0f172a,#020617);}    
-    h1{margin:0;font-size:40px;color:#38bdf8;}
-    p{color:#94a3b8;}
-    .gallery{max-width:1200px;margin:40px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;padding:20px;}
-    .gallery img{width:100%;border-radius:20px;border:2px solid #38bdf8;box-shadow:0 0 30px rgba(56,189,248,0.4);transition:0.4s;}
-    .gallery img:hover{transform:scale(1.08);box-shadow:0 0 50px rgba(56,189,248,0.8);}    
-    a{color:#38bdf8;text-decoration:none;font-size:16px;}
-    footer{text-align:center;padding:25px;color:#38bdf8;background:#000;margin-top:50px;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sachin Chouhan | Photo Gallery</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#020617;
+    color:#e5e7eb;
+}
+
+/* Header */
+header{
+    text-align:center;
+    padding:50px 20px;
+    background:radial-gradient(circle at top, #0f172a, #020617);
+}
+
+header h1{
+    font-size:40px;
+    color:#38bdf8;
+}
+
+header p{
+    color:#94a3b8;
+}
+
+header a{
+    color:#38bdf8;
+    text-decoration:none;
+    font-size:16px;
+}
+
+/* Gallery Grid */
+.gallery{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:25px;
+}
+
+/* Images */
+.gallery img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+    border:2px solid #38bdf8;
+    box-shadow:0 10px 30px rgba(56,189,248,0.4);
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+    box-shadow:0 20px 50px rgba(56,189,248,0.8);
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:25px;
+    color:#38bdf8;
+    background:#000;
+    margin-top:50px;
+}
+</style>
 </head>
-<body><header>
-  <h1>My Photo Gallery</h1>
-  <p>Some moments from my journey, discipline, learning and growth</p>
-  <p><a href="index.html">⬅ Back to Home</a></p>
-</header><section class="gallery">
-  <img src="./photo1.jpg" alt="Photo 1">
-<img src="./photo2.jpg" alt="Photo 2">
-<img src="./photo3.jpg" alt="Photo 3">
-<img src="./photo4.jpg" alt="Photo 4">
-<img src="./photo5.jpg" alt="Photo 5">
-  <p>© 2026 Sachin Chouhan | Proud Future IITian</p>
-</footer></body>
+
+<body>
+
+<header>
+    <h1>My Photo Gallery</h1>
+    <p>Some moments from my journey, discipline, learning and growth</p>
+    <p><a href="index.html">← Back to Home</a></p>
+</header>
+
+<section class="gallery">
+    <img src="./photo1.jpg" alt="Photo 1">
+    <img src="./photo2.jpg" alt="Photo 2">
+    <img src="./photo3.jpg" alt="Photo 3">
+    <img src="./photo4.jpg" alt="Photo 4">
+    <img src="./photo5.jpg" alt="Photo 5">
+</section>
+
+<footer>
+    <p>© 2026 Sachin Chouhan | Proud Future IITian</p>
+</footer>
+
+</body>
 </html>
