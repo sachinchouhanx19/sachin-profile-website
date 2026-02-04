@@ -1,135 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sachin Chouhan | Portfolio</title>
-<link rel="stylesheet" href="css/style.css">
-<!-- Lightbox CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Chouhan | Profile</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 <section class="hero" id="home">
-  <img src="profile.jpg" alt="Sachin Chouhan">
-  <div class="info">
+    <img src="profile.jpg" alt="Sachin Chouhan">
     <h1>Sachin Chouhan</h1>
     <p>Class 12th (PCM)</p>
-    <p>Live: Ujjain</p>
-    <p>School: Madhav Nagar, Ujjain</p>
+    <p>Live: Ujjain | School: Madhav Nagar, Ujjain</p>
     <div class="buttons">
-      <a href="#story">My Story</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact Me</a>
+        <a href="#story">My Story</a>
+        <a href="#gallery">Gallery</a>
+        <a href="Sachin_Chouhan_Resume.pdf" target="_blank">Resume</a>
+        <a href="#contact">Contact Me</a>
     </div>
-  </div>
 </section>
 
 <!-- MY FULL STORY -->
 <section class="section" id="story">
-  <h2>My Full Story</h2>
-  <p id="story-text"></p>
+    <h2>My Full Story</h2>
+    <p>
+        Hello! I am Sachin Chouhan, a passionate learner and future IITian. I am currently in Class 12th (PCM) at Madhav Nagar School, Ujjain. 
+        I have been deeply interested in Physics, Chemistry, and Mathematics since my early school years. 
+        Learning and exploring new concepts drives me every day to achieve my goals. I have participated in multiple science competitions, 
+        coding challenges, and educational workshops to sharpen my skills. Apart from academics, I am also passionate about technology, 
+        web development, and building useful projects. My journey has been filled with hard work, determination, and constant curiosity, 
+        which motivates me to keep learning and growing. I aim to crack IIT with excellent preparation and also make meaningful contributions 
+        to the tech community through projects, teaching, and sharing knowledge. My ultimate goal is to combine technical expertise with 
+        creativity to solve real-world problems and inspire others on the path of learning and excellence.
+    </p>
 </section>
 
 <!-- GALLERY -->
 <section class="section" id="gallery">
-  <h2>My Gallery</h2>
-  <div class="gallery-container">
-    <a href="photo1.jpg" class="gallery-link">View Photo 1</a>
-    <a href="photo2.jpg" class="gallery-link">View Photo 2</a>
-    <a href="photo3.jpg" class="gallery-link">View Photo 3</a>
-    <a href="photo4.jpg" class="gallery-link">View Photo 4</a>
-    <a href="photo5.jpg" class="gallery-link">View Photo 5</a>
-  </div>
+    <h2>My Gallery</h2>
+    <div class="gallery">
+        <a href="photo1.jpg" target="_blank"><img src="photo1.jpg" alt="Photo 1"></a>
+        <a href="photo2.jpg" target="_blank"><img src="photo2.jpg" alt="Photo 2"></a>
+        <a href="photo3.jpg" target="_blank"><img src="photo3.jpg" alt="Photo 3"></a>
+        <a href="photo4.jpg" target="_blank"><img src="photo4.jpg" alt="Photo 4"></a>
+        <a href="photo5.jpg" target="_blank"><img src="photo5.jpg" alt="Photo 5"></a>
+    </div>
 </section>
 
 <!-- RESUME -->
-<section class="section" id="resume">
-  <h2>Resume</h2>
-  <div class="resume-buttons">
+<section class="section resume" id="resume">
+    <h2>Resume</h2>
     <a href="Sachin_Chouhan_Resume.pdf" target="_blank">View Resume</a>
     <a href="Sachin_Chouhan_Resume.pdf" download>Download Resume</a>
-  </div>
 </section>
 
-<!-- FEEDBACK -->
+<!-- FEEDBACK & SUGGESTIONS -->
 <section class="section" id="feedback">
-  <h2>Feedback & Suggestions</h2>
-  <p>Please share your feedback or suggestions:</p>
-  <form action="https://formspree.io/f/mojlgpop" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="_replyto" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Feedback / Suggestion" rows="6" required></textarea>
-    <button type="submit">Send Feedback</button>
-  </form>
+    <h2>Feedback & Suggestions</h2>
+    <form action="https://formspree.io/f/mojlgpop" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="feedback" placeholder="Your Feedback / Suggestion" rows="5" required></textarea>
+        <button type="submit">Send Feedback</button>
+    </form>
 </section>
 
-<!-- CONTACT -->
-<section class="section contact" id="contact">
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/mojlgpop" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="_replyto" placeholder="Your Email" required>
-    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+<!-- CONTACT ME -->
+<section class="section" id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mojlgpop" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
 </section>
 
 <!-- SOCIAL LINKS -->
-<section class="section" id="social">
-  <h2>Connect with Me</h2>
-  <div class="social-buttons">
-    <a href="https://instagram.com/your_instagram" target="_blank">Instagram</a>
-    <a href="https://www.snapchat.com/add/your_snapchat" target="_blank">Snapchat</a>
-    <a href="https://www.youtube.com/@your_channel" target="_blank">YouTube</a>
-    <a href="https://play.google.com/store/apps/details?id=com.pwapp" target="_blank">PW App</a>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  © <span id="year"></span> Sachin Chouhan | Future IITian
+    <h2>Connect with Me</h2>
+    <a href="https://www.instagram.com/your_instagram" target="_blank">Instagram</a>
+    <a href="https://www.snapchat.com/add/your_snapchat" target="_blank">Snapchat</a>
+    <a href="https://www.youtube.com/@your_youtube" target="_blank">YouTube</a>
+    <a href="https://wa.me/your_phone_number" target="_blank">WhatsApp</a>
 </footer>
-
-<!-- JS Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.js"></script>
-<script>
-// Update year
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// Reveal sections on scroll
-const sections = document.querySelectorAll(".section");
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    if(sec.getBoundingClientRect().top < window.innerHeight - 120){
-      sec.classList.add("show");
-    }
-  });
-});
-
-// Typing animation for story
-const storyText = `Hello! I am Sachin Chouhan, a passionate learner and future IITian. 
-I am currently in Class 12th (PCM) at Madhav Nagar School, Ujjain. 
-I have been deeply interested in Physics, Chemistry, Mathematics and coding from a young age. 
-Through consistent practice, projects, and experiments, I aim to excel in IIT exams. 
-This website showcases my skills, projects, gallery, resume, and ways to contact me. 
-I hope to inspire others and build a bright future with knowledge and creativity.`;
-
-let i = 0;
-function typeStory(){
-  if(i < storyText.length){
-    document.getElementById("story-text").innerHTML += storyText.charAt(i);
-    i++;
-    setTimeout(typeStory,25);
-  }
-}
-window.onload = typeStory;
-
-// Initialize Lightbox for gallery
-const lightbox = new SimpleLightbox('.gallery-container a', { /* options */ });
-</script>
 
 </body>
 </html>
