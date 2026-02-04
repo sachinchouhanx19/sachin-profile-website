@@ -1,68 +1,205 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sachin Chouhan | Future IITian</title>
-  <style>
-    *{box-sizing:border-box;}
-    body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#020617;color:#e5e7eb;line-height:1.7;}
-    header{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:radial-gradient(circle at top,#0f172a,#020617);animation:fadeIn 2s;}
-    header img{width:170px;height:170px;border-radius:50%;border:4px solid #38bdf8;box-shadow:0 0 30px rgba(56,189,248,0.6);}
-    h1{font-size:42px;margin:20px 0 10px;}
-    h2{color:#38bdf8;margin-top:60px;font-size:30px;}
-    p{font-size:17px;}
-    section{max-width:1100px;margin:auto;padding:40px 20px;animation:slideUp 1.6s;}
-    .tagline{color:#94a3b8;font-size:18px;}
-    .skills span{display:inline-block;background:#020617;border:1px solid #38bdf8;color:#38bdf8;padding:10px 16px;margin:6px;border-radius:25px;box-shadow:0 0 15px rgba(56,189,248,0.35);transition:0.3s;}
-    .skills span:hover{background:#38bdf8;color:#020617;transform:scale(1.08);}
-    footer{background:#000;text-align:center;padding:25px;margin-top:80px;color:#38bdf8;font-size:16px;}
-    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-    @keyframes slideUp{from{transform:translateY(50px);opacity:0;}to{transform:translateY(0);opacity:1;}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sachin Chouhan | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#020617;
+    color:#e5e7eb;
+}
+
+/* Hero Section */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:radial-gradient(circle at top, #0f172a, #020617);
+    animation:fadeIn 2s ease;
+}
+
+.hero img{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #38bdf8;
+    box-shadow:0 20px 60px rgba(56,189,248,0.6);
+    animation:float 3s ease-in-out infinite;
+}
+
+.hero h1{
+    margin-top:25px;
+    font-size:44px;
+    color:#38bdf8;
+}
+
+.hero h3{
+    margin-top:10px;
+    font-size:20px;
+    color:#94a3b8;
+}
+
+.hero p{
+    max-width:800px;
+    margin-top:20px;
+    font-size:18px;
+    line-height:1.7;
+    color:#cbd5f5;
+}
+
+/* Buttons */
+.buttons{
+    margin-top:30px;
+}
+
+.buttons a{
+    display:inline-block;
+    margin:10px;
+    padding:14px 34px;
+    background:#38bdf8;
+    color:#020617;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.buttons a:hover{
+    background:#0ea5e9;
+    transform:scale(1.08);
+}
+
+/* Section */
+.section{
+    width:90%;
+    max-width:1000px;
+    margin:90px auto;
+    text-align:center;
+    animation:fadeUp 1.5s ease;
+}
+
+.section h2{
+    font-size:36px;
+    color:#38bdf8;
+    margin-bottom:25px;
+}
+
+.section p{
+    font-size:18px;
+    color:#94a3b8;
+    line-height:1.8;
+    text-align:justify;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#000;
+    color:#38bdf8;
+}
+
+/* Animations */
+@keyframes fadeIn{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px)}
+    to{opacity:1; transform:translateY(0)}
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-15px)}
+}
+</style>
 </head>
-<body><header>
-  <img src="profile.jpg" alt="Sachin Chouhan Photo">
-  <h1>Sachin Chouhan</h1>
-  <p class="tagline">Future IITian | Student | Programmer | Motivational Speaker</p>
-</header><section>
-  <h2>About Me</h2>
-  <p>
-    My name is Sachin Chouhan. I am a Class 12 MP Board student from a Hindi medium background, driven by a strong determination to become an IITian. I firmly believe that success is not dependent on background, language, or resources, but on mindset, discipline, and consistency. From an early stage of my academic journey, I decided that I would dedicate my life to learning, self-growth, and excellence.
-  </p>
-</section><section>
-  <h2>Skills & Strengths</h2>
-  <div class="skills">
-    <span>Python Programming</span>
-    <span>Java (Basics)</span>
-    <span>HTML & CSS</span>
-    <span>Problem Solving</span>
-    <span>Discipline & Consistency</span>
-    <span>Motivational Speaking</span>
-    <span>Content Creation</span>
-  </div>
-</section><section>
-  <h2>My Complete Life Story</h2>
-  <p>
-    I was born with dreams far bigger than my surroundings. Coming from a Hindi medium background, the path toward competitive exams and advanced education was never easy. Limited resources, lack of guidance, and constant comparison created many obstacles, but I never allowed these challenges to define my limits. Instead, they shaped my character and strengthened my resolve.
-    <br><br>
-    My daily routine is built on discipline. I wake up early, study for long hours, revise consistently, and analyze my mistakes honestly. Preparing for IIT is not only about mastering physics, chemistry, and mathematics; it is about building patience, mental toughness, and faith in long-term effort. I believe that consistency beats motivation, and discipline beats talent when talent does not work hard.
-    <br><br>
-    Failure has been an important teacher in my journey. There were times when test scores were low and confidence was shaken. Instead of giving up, I chose to learn from every mistake. I improved my strategy, strengthened my weak areas, and moved forward with renewed focus. Each setback became a lesson, not a stopping point.
-    <br><br>
-    Technology plays a vital role in my life. Learning programming languages like Python and Java has trained my mind to think logically and systematically. Coding taught me that even the most complex problems can be solved when broken down into smaller, manageable steps. This mindset helps me not only in programming, but also in academics and real-life challenges.
-    <br><br>
-    Along with studies, I am deeply passionate about motivation and self-improvement. I like to inspire students who feel lost, weak, or afraid of competition. I strongly believe that every student has immense potential, and with the right mindset and guidance, anyone can rise above limitations. My goal is to grow as a learner and help others grow alongside me.
-    <br><br>
-    My ultimate aim is to crack IIT and become a skilled engineer who contributes positively to society. I do not chase success for status alone; I seek knowledge, growth, and the ability to create meaningful impact. This website is a reflection of my journey, my discipline, and my belief that nothing is impossible for a focused and determined mind.
-    <br><br>
-    This is only the beginning of a long journey. The road is challenging, but my commitment is unbreakable. I am building myself day by day, step by step, with patience, honesty, and hard work. I am not waiting for success—I am preparing myself to deserve it.
-  </p>
-</section><section>
-  <h2>Contact</h2>
-  <p>📞 Phone: 9098130360</p>
-  <p>📧 Email: sachinchouhan0140@gmail.com</p>
-  <p>💻 GitHub: https://github.com/yourusername</p>
-</section><footer>
-  <p>© 2026 Sachin Chouhan | Proud Future IITian</p>
-</footer></body>
+
+<body>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <img src="./profile.jpg" alt="Sachin Chouhan">
+
+    <h1>Sachin Chouhan</h1>
+    <h3>Future IITian | Student | Programmer</h3>
+
+    <p>
+        Dedicated learner with strong discipline, consistency and a passion
+        for technology, science and self-improvement.
+    </p>
+
+    <p style="margin-top:15px;color:#38bdf8;">
+        GitHub Username: <b>sachinchouhanx19</b>
+    </p>
+
+    <div class="buttons">
+        <a href="#home">Home</a>
+        <a href="photos.html">My Gallery</a>
+        <a href="https://www.python.org" target="_blank">Learn Python</a>
+        <a href="https://github.com/sachinchouhanx19" target="_blank">GitHub</a>
+    </div>
+</section>
+
+<!-- FULL STORY -->
+<section class="section" id="story">
+    <h2>My Full Story</h2>
+    <p>
+        My name is Sachin Chouhan, and my journey is built on discipline,
+        determination, and continuous learning. I come from a background
+        where success is earned through hard work, consistency, and patience.
+        From an early stage, I realized that education is not just about marks,
+        but about developing skills, mindset, and problem-solving ability.
+        <br><br>
+        I am deeply interested in science, mathematics, and programming,
+        especially Python, which helps me think logically and creatively.
+        Every day, I focus on improving myself by studying sincerely,
+        practicing problems, and learning new technologies. I believe that
+        small daily efforts lead to big achievements over time.
+        <br><br>
+        My goal is to become an IITian and a successful engineer who can
+        contribute positively to society through knowledge and innovation.
+        I strongly believe in self-discipline, time management, and staying
+        motivated even during difficult phases. Failures are not obstacles
+        for me; they are lessons that push me to work harder.
+        <br><br>
+        This website represents my journey, my efforts, and my dreams.
+        Through this platform, I want to showcase my learning path,
+        achievements, and memorable moments that shape who I am becoming.
+    </p>
+</section>
+
+<!-- GALLERY SECTION -->
+<section class="section">
+    <h2>My Gallery</h2>
+    <p>
+        A collection of moments that reflect my journey, discipline,
+        learning, and growth.
+    </p>
+    <div class="buttons">
+        <a href="photos.html">Open Gallery</a>
+        <a href="#home">Back to Home</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Sachin Chouhan | Proud Future IITian</p>
+</footer>
+
+</body>
 </html>
