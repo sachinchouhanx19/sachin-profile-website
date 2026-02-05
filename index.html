@@ -3,67 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sachin Chouhan - Profile</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- CSS File -->
-  <link rel="stylesheet" href="style.css">
+  <title>Sachin Chouhan | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Lightbox CSS for gallery -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="#profile">Profile</a>
-    <a href="#story">My Story</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- Profile Section -->
-  <section id="profile">
-    <img src="profile.jpg" alt="Sachin Chouhan">
+<!-- HERO / PROFILE -->
+<section class="hero" id="home">
+  <img src="images/profile.jpg" alt="Sachin Chouhan">
+  <div class="info">
     <h1>Sachin Chouhan</h1>
-    <p>School: Madhav Nagar, Ujjain</p>
-    <p>Class: 12th</p>
-    <p class="skills">Python Learner | Coding Enthusiast | Mathematics Learner | Finance Learner</p>
-  </section>
-
-  <!-- Story Section -->
-  <section id="story">
-    <h2>My Story</h2>
-    <p>
-      <!-- Paste your 300 words story here -->
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec leo sit amet velit elementum dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer in enim eu lacus feugiat venenatis. Mauris ut sapien non ligula ultricies tincidunt. Sed porta libero sed libero luctus, non posuere ex malesuada. Donec vel mi a elit malesuada facilisis. Fusce hendrerit orci non turpis tincidunt, sed blandit odio convallis. Suspendisse potenti. Praesent pharetra ligula a libero posuere, nec imperdiet leo dictum. Aliquam erat volutpat. Vivamus malesuada nisi id nisi pharetra, sed accumsan enim laoreet. Integer id nunc nec erat commodo ultricies. Praesent finibus, lorem a cursus ultrices, elit lacus feugiat justo, nec facilisis nisi nulla at justo. Nam malesuada diam ac ligula porta, nec lacinia felis dignissim. Suspendisse vitae lacus euismod, rhoncus lectus nec, porttitor odio. Donec in justo sed nulla feugiat pretium. Sed consectetur nisl sed justo tincidunt, in efficitur ligula tincidunt. Vivamus quis malesuada orci. Aenean non metus id libero facilisis faucibus.
-    </p>
-  </section>
-
-  <!-- Gallery Section -->
-  <section id="gallery">
-    <h2>My Gallery</h2>
-    <div class="photos">
-      <img src="photo1.jpg" alt="Photo 1">
-      <img src="photo2.jpg" alt="Photo 2">
-      <img src="photo3.jpg" alt="Photo 3">
-      <img src="photo4.jpg" alt="Photo 4">
-      <img src="photo5.jpg" alt="Photo 5">
+    <p>Class 12th (PCM)</p>
+    <p>Live: Ujjain | School: Madhav Nagar, Ujjain</p>
+    <div class="buttons">
+      <a href="#story">My Story</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact Me</a>
     </div>
-  </section>
+    <div class="social-links">
+      <a href="https://www.instagram.com/your_instagram" target="_blank">Instagram</a>
+      <a href="https://www.snapchat.com/add/your_snapchat" target="_blank">Snapchat</a>
+      <a href="https://www.youtube.com/@your_channel" target="_blank">YouTube</a>
+      <a href="https://play.google.com/store/apps/details?id=com.pwapp" target="_blank">PW App</a>
+    </div>
+  </div>
+</section>
 
-  <!-- Contact & Suggestion Section -->
-  <section id="contact">
-    <h2>Contact Me & Give Suggestions</h2>
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Write your suggestion or message here" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+<!-- MY FULL STORY -->
+<section class="section" id="story">
+  <h2>My Full Story</h2>
+  <p>
+    Hello! I am Sachin Chouhan, a passionate learner and future IITian. I am currently in Class 12th (PCM) at Madhav Nagar School, Ujjain.
+    My love for Physics, Chemistry, Mathematics and coding started from a young age. I consistently work on projects, experiments, and problem-solving exercises.
+    I have participated in competitions and coding challenges, which sharpen my skills. Through dedication and discipline, I aim to excel in IIT exams.
+    Beyond academics, I enjoy building technology projects, learning new programming skills, and sharing knowledge. This website showcases my journey, projects, gallery, resume, and ways to contact me.
+    I hope to inspire others and keep growing with creativity and knowledge. My ultimate goal is to combine technical expertise with problem-solving skills for a bright future.
+  </p>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2026 Sachin Chouhan
-  </footer>
+<!-- GALLERY -->
+<section class="section" id="gallery">
+  <h2>My Gallery</h2>
+  <div class="gallery">
+    <a href="images/photo1.jpg"><img src="images/photo1.jpg" alt="Photo 1"></a>
+    <a href="images/photo2.jpg"><img src="images/photo2.jpg" alt="Photo 2"></a>
+    <a href="images/photo3.jpg"><img src="images/photo3.jpg" alt="Photo 3"></a>
+    <a href="images/photo4.jpg"><img src="images/photo4.jpg" alt="Photo 4"></a>
+    <a href="images/photo5.jpg"><img src="images/photo5.jpg" alt="Photo 5"></a>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section class="section resume" id="resume">
+  <h2>Resume</h2>
+  <a href="Sachin_Chouhan_Resume.pdf" target="_blank">View Resume</a>
+  <a href="Sachin_Chouhan_Resume.pdf" download>Download Resume</a>
+</section>
+
+<!-- IIT MENTORSHIP PROGRAM -->
+<section class="section" id="mentorship">
+  <h2>IIT Mentorship Program</h2>
+  <p>Join my exclusive mentorship program to get guidance, tips, and support for your IIT preparation. Choose a plan that suits you!</p>
+  <div class="mentorship-plans">
+    <div class="plan">
+      <h3>₹99 - WhatsApp Program</h3>
+      <p>Receive guidance, tips, and daily updates via WhatsApp. Ideal for students who want limited support at an affordable price.</p>
+      <a href="https://wa.me/your_phone_number?text=I%20want%20to%20join%20the%20₹99%20WhatsApp%20Mentorship%20Program" target="_blank">Join Now</a>
+    </div>
+    <div class="plan">
+      <h3>₹999 - All-Time Contact Program</h3>
+      <p>Get full-time mentorship including WhatsApp, email, and video call support. Access all study plans, guidance, and priority responses.</p>
+      <a href="https://wa.me/your_phone_number?text=I%20want%20to%20join%20the%20₹999%20All-Time%20Mentorship%20Program" target="_blank">Join Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEEDBACK & SUGGESTIONS -->
+<section class="section" id="feedback">
+  <h2>Feedback & Suggestions</h2>
+  <form action="https://formspree.io/f/mojlgpop" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="feedback" placeholder="Your Feedback / Suggestion" rows="5" required></textarea>
+    <button type="submit">Send Feedback</button>
+  </form>
+</section>
+
+<!-- CONTACT ME -->
+<section class="section" id="contact">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/mojlgpop" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© <span id="year"></span> Sachin Chouhan | Future IITian</p>
+</footer>
+
+<!-- JS Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.js"></script>
+<script>
+  // Update year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Initialize Lightbox for gallery
+  const lightbox = new SimpleLightbox('.gallery a');
+</script>
 
 </body>
 </html>
