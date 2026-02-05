@@ -4,107 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sachin Chouhan - Profile</title>
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* Reset & General */
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-    body { font-family: 'Poppins', sans-serif; background: #f0f4f8; color: #333; }
-    a { text-decoration: none; color: inherit; }
-    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-    h1,h2,h3 { text-align: center; margin-bottom: 20px; }
-    
-    /* Navigation */
-    nav {
-      position: sticky;
-      top: 0;
-      background: #2196F3;
-      padding: 15px 0;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    nav a { color: white; font-weight: 600; font-size: 16px; transition: 0.3s; }
-    nav a:hover { color: #ffd700; transform: scale(1.1); }
-
-    /* Profile Section */
-    #profile {
-      display: flex; flex-direction: column; align-items: center;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: #fff; border-radius: 20px; padding: 50px 20px;
-      box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
-      margin-bottom: 50px;
-      animation: fadeIn 1s ease forwards;
-    }
-    #profile img {
-      width: 200px; height: 200px; border-radius: 50%; object-fit: cover;
-      border: 5px solid #fff; margin-bottom: 20px;
-      transition: transform 0.5s;
-    }
-    #profile img:hover { transform: scale(1.1) rotate(5deg); }
-    #profile h1 { font-size: 32px; font-weight: 700; }
-    #profile p { font-size: 18px; margin: 5px 0; }
-    .skills { margin-top: 15px; font-weight: 600; color: #ffd700; text-align: center; }
-
-    /* Story Section */
-    #story {
-      background: #fff; border-radius: 20px; padding: 40px;
-      box-shadow: 0px 8px 25px rgba(0,0,0,0.1); margin-bottom: 50px;
-      animation: fadeIn 1s ease forwards;
-    }
-    #story p { font-size: 16px; text-align: justify; color: #555; }
-
-    /* Gallery Section */
-    #gallery {
-      background: #fff; border-radius: 20px; padding: 40px;
-      box-shadow: 0px 8px 25px rgba(0,0,0,0.1); margin-bottom: 50px;
-      animation: fadeIn 1s ease forwards;
-    }
-    #gallery .photos {
-      display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;
-    }
-    #gallery .photos img {
-      width: 300px; height: 200px; object-fit: cover; border-radius: 15px;
-      cursor: pointer; transition: transform 0.5s, box-shadow 0.5s;
-    }
-    #gallery .photos img:hover {
-      transform: scale(1.1);
-      box-shadow: 0px 10px 25px rgba(33,150,243,0.6);
-    }
-
-    /* Contact & Suggestion Section */
-    #contact {
-      background: #fff; border-radius: 20px; padding: 40px;
-      box-shadow: 0px 8px 25px rgba(0,0,0,0.1); margin-bottom: 50px;
-      animation: fadeIn 1s ease forwards;
-    }
-    form { display: flex; flex-direction: column; max-width: 500px; margin: auto; }
-    form input, form textarea, form button {
-      padding: 12px; margin: 10px 0; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;
-    }
-    form button {
-      background: #2196F3; color: white; border: none; cursor: pointer; font-weight: 600;
-      transition: 0.3s;
-    }
-    form button:hover { background: #0b7dda; transform: scale(1.05); }
-
-    /* Footer */
-    footer { text-align: center; padding: 20px; background: #2196F3; color: #fff; }
-
-    /* Animations */
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: translateY(0);} }
-
-    /* Responsive */
-    @media(max-width: 768px){
-      #profile img { width: 150px; height: 150px; }
-      #gallery .photos img { width: 100%; height: auto; }
-    }
-  </style>
+  <!-- CSS File -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation Bar -->
   <nav>
     <a href="#profile">Profile</a>
     <a href="#story">My Story</a>
@@ -126,7 +33,7 @@
     <h2>My Story</h2>
     <p>
       <!-- Paste your 300 words story here -->
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec leo sit amet velit elementum dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer in enim eu lacus feugiat venenatis. Mauris ut sapien non ligula ultricies tincidunt. Sed porta libero sed libero luctus, non posuere ex malesuada. Donec vel mi a elit malesuada facilisis. Fusce hendrerit orci non turpis tincidunt, sed blandit odio convallis. Suspendisse potenti. Praesent pharetra ligula a libero posuere, nec imperdiet leo dictum. Aliquam erat volutpat. Vivamus malesuada nisi id nisi pharetra, sed accumsan enim laoreet. Integer id nunc nec erat commodo ultricies.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec leo sit amet velit elementum dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer in enim eu lacus feugiat venenatis. Mauris ut sapien non ligula ultricies tincidunt. Sed porta libero sed libero luctus, non posuere ex malesuada. Donec vel mi a elit malesuada facilisis. Fusce hendrerit orci non turpis tincidunt, sed blandit odio convallis. Suspendisse potenti. Praesent pharetra ligula a libero posuere, nec imperdiet leo dictum. Aliquam erat volutpat. Vivamus malesuada nisi id nisi pharetra, sed accumsan enim laoreet. Integer id nunc nec erat commodo ultricies. Praesent finibus, lorem a cursus ultrices, elit lacus feugiat justo, nec facilisis nisi nulla at justo. Nam malesuada diam ac ligula porta, nec lacinia felis dignissim. Suspendisse vitae lacus euismod, rhoncus lectus nec, porttitor odio. Donec in justo sed nulla feugiat pretium. Sed consectetur nisl sed justo tincidunt, in efficitur ligula tincidunt. Vivamus quis malesuada orci. Aenean non metus id libero facilisis faucibus.
     </p>
   </section>
 
@@ -142,7 +49,7 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact & Suggestion Section -->
   <section id="contact">
     <h2>Contact Me & Give Suggestions</h2>
     <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
@@ -153,6 +60,7 @@
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
     &copy; 2026 Sachin Chouhan
   </footer>
